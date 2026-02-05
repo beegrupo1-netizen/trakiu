@@ -1,138 +1,189 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-PT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Trakiu — Gestão Simples de Equipas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trakiu - Gestão de Equipas e Picagem de Ponto</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a class="logo" href="#top">Trakiu</a>
-      <button id="navToggle" class="nav-toggle" aria-label="Abrir navegação">☰</button>
-      <nav id="mainNav" class="main-nav">
-        <a href="#solucao">Solução</a>
-        <a href="#features">Features</a>
-        <a href="#contato">Contato</a>
-      </nav>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo">
+                <img src="assets/trakiu.svg" alt="Trakiu Logo" class="logo-icon">
+            </a>
+            <nav class="nav">
+                <button class="nav-toggle" id="navToggle">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#solution">Solução</a></li>
+                    <li><a href="#differentiation">Diferencial</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <div class="app-name">TRAKIU</div>
+            <div class="badge">MOBILE-FIRST</div>
+            <h1 class="hero-title">Gestão de equipas<br><span class="hero-highlight">simples e inteligente</span></h1>
+            
+            <div class="hero-buttons">
+                <a href="#solution" class="btn btn-primary">Saber mais</a>
+                <a href="#" id="downloadBtn" class="btn btn-secondary">Download</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section id="solution" class="solution">
+        <div class="container">
+            <h2>A SOLUÇÃO</h2>
+            
+            <div class="solution-content">
+                <div class="solution-text">
+                    
+                    <div class="solution-cards">
+                        <div class="solution-card">
+                            <div class="icon-small red">
+                                <img src="assets/1.svg" alt="GPS Icon">
+                            </div>
+                            <div>
+                                <h3>Picagem por Geolocalização</h3>
+                                <p>Registo de ponto preciso e anti-fraude com verificação GPS em tempo real</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-card">
+                            <div class="icon-small cyan">
+                                <img src="assets/2.svg" alt="Teams Icon">
+                            </div>
+                            <div>
+                                <h3>Gestão Horários e Equipas</h3>
+                                <p>Escalas flexíveis, férias e gestão de tarefas num só lugar</p>
+                            </div>
+                        </div>
+
+                        <div class="solution-card">
+                            <div class="icon-small purple">
+                                <img src="assets/3.svg" alt="Management Icon">
+                            </div>
+                            <div>
+                                <h3>Visão clara do Dia a Dia</h3>
+                                <p>Dashboard intuitivo e sistema de notificações push</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="solution-mockup">
+                    <img src="assets/mockup.png" alt="Mockup TRAKIU" class="mockup-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="differentiation" class="differentiation">
+        <div class="container">
+            <h2>O QUE NOS DIFERENCIA</h2>
+            
+            <div class="diff-grid">
+                <div class="diff-card">
+                    <div class="icon-diff">
+                        <img src="assets/4.svg" alt="Simplicity Icon">
+                    </div>
+                    <h3>Simplicidade Real</h3>
+                    <p>Foco absoluto em UX/UI moderno. Eliminamos o ruído visual para criar uma experiência intuitiva que não requer treino.</p>
+                </div>
+                <div class="diff-card">
+                    <div class="icon-diff">
+                        <img src="assets/5.svg" alt="Mobile Icon">
+                    </div>
+                    <h3>Gestão na Palma da Mão</h3>
+                    <p>Acesso total em qualquer lugar. O escritório vai consigo, permitindo aprovações e controlo total via smartphone.</p>
+                </div>
+                <div class="diff-card">
+                    <div class="icon-diff">
+                        <img src="assets/6.svg" alt="Speed Icon">
+                    </div>
+                    <h3>Implementação Rápida</h3>
+                    <p>Sem configurações pesadas ou servidores locais. A sua equipa começa a usar a TRAKIU em minutos, não em meses.</p>
+                </div>
+                <div class="diff-card">
+                    <div class="icon-diff">
+                        <img src="assets/7.svg" alt="Support Icon">
+                    </div>
+                    <h3>Suporte Próximo</h3>
+                    <p>Tecnologia com rosto humano. Acompanhamos o seu crescimento com uma equipa de suporte dedicada e acessível.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="cta">
+        <div class="container">
+            <h2>Vamos transformar a gestão<br>de recursos humanos</h2>
+            
+            <div class="cta-content-centered">
+                <div class="cta-icon-circle">
+                    <img src="assets/10.svg" alt="CTA Icon">
+                </div>
+                
+                <div class="cta-info-centered">
+                    <div class="cta-box-centered">
+                        <div class="cta-box-icon">
+                            <img src="assets/8.svg" alt="Email Icon">
+                        </div>
+                        <div class="cta-box-text">
+                            <div class="cta-label">Email</div>
+                            <p>geral@trakiu.com</p>
+                        </div>
+                    </div>
+                    <div class="cta-box-centered">
+                        <div class="cta-box-icon">
+                            <img src="assets/9.svg" alt="Phone Icon">
+                        </div>
+                        <div class="cta-box-text">
+                            <div class="cta-label">Site</div>
+                            <p>www.trakiu.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Modal -->
+    <div id="downloadModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2>Descarregar TRAKIU</h2>
+            <p>Escolha a sua plataforma</p>
+            <div class="download-links">
+                <a href="https://apps.apple.com/pt/app/trakiu/id6502695600" target="_blank" class="download-link app-store">
+                    <img src="assets/apple.svg" alt="App Store Icon" class="store-icon-img">
+                    <span class="store-name">App Store</span>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.thepinkseagull.traxler&pcampaignid=web_share" target="_blank" class="download-link google-play">
+                    <img src="assets/android.svg" alt="Google Play Icon" class="store-icon-img">
+                    <span class="store-name">Google Play</span>
+                </a>
+            </div>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <!-- HERO/LANDING -->
-    <section class="hero" id="top">
-      <div class="container">
-        <div class="hero-badge">SOLUÇÃO MOBILE-FIRST</div>
-        <h1 class="hero-title">TRAKIU</h1>
-        <p class="hero-subtitle">Gestão simples de equipas e picagem de ponto por geolocalização.</p>
-        <div class="hero-icons">
-          <div class="icon-box">
-            <span class="icon">📍</span>
-            <span>GPS</span>
-          </div>
-          <div class="icon-box">
-            <span class="icon">👥</span>
-            <span>EQUIPAS</span>
-          </div>
-          <div class="icon-box">
-            <span class="icon">📊</span>
-            <span>GESTÃO</span>
-          </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Trakiu. Todos os direitos reservados.</p>
         </div>
-        <a href="#solucao" class="btn btn-primary">Explorar</a>
-      </div>
-    </section>
+    </footer>
 
-    <!-- SOLUÇÃO -->
-    <section class="solucao" id="solucao">
-      <div class="container">
-        <div class="solucao-header">
-          <div class="solucao-label">MOBILE-FIRST</div>
-          <h2>A SOLUÇÃO</h2>
-          <p class="solucao-desc">A TRAKIU é <strong>SIMPLES E INTUITIVA</strong>, eliminando a complexidade administrativa.</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="assets/icon1.png" alt="Geolocalização" onerror="this.outerHTML='<svg width=\"72\" height=\"72\" viewBox=\"0 0 72 72\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"72\" height=\"72\" rx=\"20\" fill=\"#1a2a3a\"/><circle cx=\"36\" cy=\"36\" r=\"26\" fill=\"#d97c71\"/><path d=\"M30 42L44 28M44 28L40 24M44 28L48 32\" stroke=\"#0a1929\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>'">
-            </div>
-            <h3>Picagem por Geolocalização</h3>
-            <p>Registo de ponto preciso e anti-fraude com verificação GPS em tempo real</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="assets/icon2.png" alt="Equipas" onerror="this.outerHTML='<div style=\"font-size: 3rem;\">👥</div>'">
-            </div>
-            <h3>Gestão Horários e Equipas</h3>
-            <p>Escalas flexíveis, férias e gestão de tarefas num só lugar</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <img src="assets/icon3.png" alt="Gestão" onerror="this.outerHTML='<div style=\"font-size: 3rem;\">📊</div>'">
-            </div>
-            <h3>Visão clara do Dia a Dia</h3>
-            <p>Dashboard intuitivo e sistema de notificações push</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PITCH -->
-    <section class="pitch">
-      <div class="container">
-        <h2>Simples, Rápido e Smart</h2>
-        <p class="pitch-text">Combina um design clean, tecnologia robusta e processos automatizados para simplificar o dia a dia dos gestores e colaboradores.</p>
-        <p class="pitch-highlight">Porque gerir pessoas não tem de ser complicado.</p>
-      </div>
-    </section>
-
-    <!-- MOCKUPS/GALERIA -->
-    <section class="mockups" id="features">
-      <div class="container">
-        <h2>Interface Intuitiva</h2>
-        <div class="mockup-grid">
-          <img src="assets/slide1.png" alt="Slide 1" class="mockup-item">
-          <img src="assets/slide2.png" alt="Slide 2" class="mockup-item">
-          <img src="assets/slide3.png" alt="Slide 3" class="mockup-item">
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section class="contato" id="contato">
-      <div class="container">
-        <h2>Pronto para Começar?</h2>
-        <form id="contactForm" class="contact-form">
-          <div class="form-group">
-            <input type="text" name="name" placeholder="Nome" required>
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Email" required>
-          </div>
-          <div class="form-group">
-            <textarea name="message" rows="4" placeholder="Mensagem" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary">Entrar em Contato</button>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p><strong>TRAKIU TECHNOLOGY</strong> © 2026</p>
-      <p><a href="mailto:geral@trakiu.com">geral@trakiu.com</a></p>
-    </div>
-  </footer>
-
-  <div id="lightbox" class="lightbox" aria-hidden="true">
-    <button id="lbClose" class="lightbox-close" aria-label="Fechar">✕</button>
-    <img id="lbImage" src="" alt="Ampliado">
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

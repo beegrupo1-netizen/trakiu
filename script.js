@@ -1,74 +1,78 @@
-document.addEventListener('DOMContentLoaded', function(){
-  // Mobile nav toggle
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
-  
-  navToggle && navToggle.addEventListener('click', ()=>{
-    mainNav.classList.toggle('show');
-  });
+// Mobile menu toggle
+const navToggle = document.querySelector('.nav-toggle');
+const navMenu = document.querySelector('.nav-menu');
 
-  // Close nav when link clicked
-  document.querySelectorAll('.main-nav a').forEach(link => {
-    link.addEventListener('click', () => {
-      mainNav.classList.remove('show');
+if (navToggle) {
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
     });
-  });
 
-  // Lightbox gallery
-  const lightbox = document.getElementById('lightbox');
-  const lbImage = document.getElementById('lbImage');
-  const lbClose = document.getElementById('lbClose');
-  
-  document.querySelectorAll('.mockup-item').forEach(img => {
-    img && img.addEventListener('click', (e) => {
-      lbImage.src = e.currentTarget.src;
-      lightbox.setAttribute('aria-hidden', 'false');
-      document.body.style.overflow = 'hidden';
+    // Close menu when a link is clicked
+    document.querySelectorAll('.nav-menu a').forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+        });
     });
-  });
+}
 
-  const closeLightbox = () => {
-    lightbox.setAttribute('aria-hidden', 'true');
-    lbImage.src = '';
-    document.body.style.overflow = '';
-  };
+// Scroll animation
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
 
-  lbClose && lbClose.addEventListener('click', closeLightbox);
-  lightbox && lightbox.addEventListener('click', (e) => {
-    if(e.target === lightbox) closeLightbox();
-  });
-
-  // Close lightbox with Escape key
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && lightbox.getAttribute('aria-hidden') === 'false') {
-      closeLightbox();
-    }
-  });
-
-  // Contact form handler
-  const contactForm = document.getElementById('contactForm');
-  contactForm && contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    
-    const formData = new FormData(contactForm);
-    const data = Object.fromEntries(formData);
-    
-    // Mock success message
-    alert(`Obrigado, ${data.name}! Receberemos sua mensagem em ${data.email}`);
-    contactForm.reset();
-  });
-
-  // Smooth scroll
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-      if(href !== '#') {
-        e.preventDefault();
-        const target = document.querySelector(href);
-        if(target) {
-          target.scrollIntoView({ behavior: 'smooth' });
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
         }
-      }
     });
-  });
+}, observerOptions);
+
+// Observe cards for scroll animations
+document.querySelectorAll('.solution-card, .diff-card, .contact-card, .cta-box').forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'all 0.6s ease-out';
+    observer.observe(card);
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+});
+
+// Download modal functionality
+const downloadBtn = document.getElementById('downloadBtn');
+const downloadModal = document.getElementById('downloadModal');
+const closeModal = document.getElementById('closeModal');
+
+if (downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadModal.classList.add('show');
+    });
+}
+
+if (closeModal) {
+    closeModal.addEventListener('click', () => {
+        downloadModal.classList.remove('show');
+    });
+}
+
+// Close modal when clicking outside
+window.addEventListener('click', (e) => {
+    if (e.target === downloadModal) {
+        downloadModal.classList.remove('show');
+    }
 });
