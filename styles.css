@@ -103,15 +103,15 @@ body::before {
     max-width: 150px;
 }
 
-.nav {
-    display: flex;
-    align-items: center;
-}
-
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 40px;
+    align-items: center;
+}
+
+.nav-menu li {
+    display: flex;
     align-items: center;
 }
 
@@ -120,7 +120,6 @@ body::before {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
-    line-height: 1.2;
 }
 
 .nav-menu a:hover {
@@ -141,7 +140,6 @@ body::before {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    line-height: 1;
 }
 
 .nav-login:hover {
@@ -1226,10 +1224,6 @@ body::before {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .header {
-        border-bottom: none;
-    }
-
     .nav-toggle {
         display: block;
     }
@@ -1237,19 +1231,15 @@ body::before {
     .nav-menu {
         position: absolute;
         top: 60px;
-        left: 50%;
-        right: auto;
-        width: 100vw;
-        transform: translateX(-50%);
+        left: 0;
+        right: 0;
         background: rgba(5, 13, 26, 0.95);
         flex-direction: column;
         gap: 0;
+        align-items: stretch;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s;
-        padding: 8px 0;
-        border-bottom: none;
-        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
     .nav-menu.active {
@@ -1257,14 +1247,9 @@ body::before {
     }
 
     .nav-menu a {
-        padding: 18px 24px;
+        padding: 15px 20px;
         display: block;
         border-bottom: 1px solid var(--card-border);
-        font-size: 16px;
-    }
-
-    .nav-menu a:active {
-        background: rgba(93, 173, 226, 0.08);
     }
 
     .nav-menu li:last-child {
@@ -1272,8 +1257,8 @@ body::before {
     }
 
     .nav-login {
-        background: transparent;
-        color: var(--light) !important;
+        background: var(--cyan);
+        color: var(--dark-bg) !important;
         border: none;
         border-radius: 0;
         display: flex;
