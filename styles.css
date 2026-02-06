@@ -1268,8 +1268,8 @@ body::before {
     }
 
     .nav-login {
-        background: var(--cyan);
-        color: var(--dark-bg) !important;
+        background: transparent;
+        color: var(--light) !important;
         border: none;
         border-radius: 0;
         display: flex;
