@@ -120,6 +120,24 @@ body::before {
     color: var(--cyan);
 }
 
+.nav-menu li:last-child {
+    margin-left: auto;
+}
+
+.nav-login {
+    color: var(--cyan) !important;
+    border: 2px solid var(--cyan);
+    padding: 8px 20px;
+    border-radius: 6px;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.nav-login:hover {
+    background: var(--cyan);
+    color: var(--dark-bg) !important;
+}
+
 .nav-toggle {
     display: none;
     background: none;
@@ -1211,6 +1229,17 @@ body::before {
         padding: 15px 20px;
         display: block;
         border-bottom: 1px solid var(--card-border);
+    }
+
+    .nav-menu li:last-child {
+        margin-left: 0;
+    }
+
+    .nav-login {
+        background: var(--cyan);
+        color: var(--dark-bg) !important;
+        border: none;
+        border-radius: 0;
     }
 
     .hero {
