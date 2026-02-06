@@ -138,6 +138,12 @@ body::before {
     color: var(--dark-bg) !important;
 }
 
+.nav-login-icon {
+    display: none;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
 .nav-toggle {
     display: none;
     background: none;
@@ -1240,6 +1246,10 @@ body::before {
         color: var(--dark-bg) !important;
         border: none;
         border-radius: 0;
+    }
+
+    .nav-login-icon {
+        display: inline;
     }
 
     .hero {
