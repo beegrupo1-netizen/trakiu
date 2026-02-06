@@ -103,10 +103,16 @@ body::before {
     max-width: 150px;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 40px;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -114,6 +120,7 @@ body::before {
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
+    line-height: 1.2;
 }
 
 .nav-menu a:hover {
@@ -134,6 +141,7 @@ body::before {
     display: inline-flex;
     align-items: center;
     gap: 10px;
+    line-height: 1;
 }
 
 .nav-login:hover {
