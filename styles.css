@@ -133,20 +133,23 @@ body::before {
     font-weight: 600;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-}
-
-.nav-login-icon {
-    width: 16px;
-    height: 16px;
-    fill: none;
-    stroke: currentColor;
-    stroke-width: 2;
+    gap: 10px;
 }
 
 .nav-login:hover {
     background: var(--cyan);
     color: var(--dark-bg) !important;
+}
+
+.nav-login-icon {
+    display: none;
+    align-items: center;
+}
+
+.nav-login-icon svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
 }
 
 .nav-toggle {
@@ -1251,6 +1254,14 @@ body::before {
         color: var(--dark-bg) !important;
         border: none;
         border-radius: 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-login-icon {
+        display: inline-flex;
     }
 
     .hero {
