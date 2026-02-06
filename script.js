@@ -38,6 +38,20 @@ document.querySelectorAll('.solution-card, .diff-card, .contact-card, .cta-box')
     observer.observe(card);
 });
 
+// Observe mockup image for animation on scroll
+const mockupImage = document.querySelector('.mockup-image');
+if (mockupImage) {
+    const mockupObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+                mockupObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    mockupObserver.observe(mockupImage);
+}
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -49,6 +63,33 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         }
+    });
+});
+
+// Add ripple effect to buttons on click
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        ripple.style.position = 'absolute';
+        ripple.style.width = '20px';
+        ripple.style.height = '20px';
+        ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+        ripple.style.borderRadius = '50%';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        ripple.style.pointerEvents = 'none';
+        ripple.style.animation = 'ripple 0.6s ease-out';
+        ripple.style.transform = 'scale(0)';
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
     });
 });
 
