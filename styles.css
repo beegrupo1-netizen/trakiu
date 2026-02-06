@@ -1233,14 +1233,19 @@ body::before {
     .nav-menu {
         position: absolute;
         top: 60px;
-        left: 0;
-        right: 0;
+        left: 50%;
+        right: auto;
+        width: 100vw;
+        transform: translateX(-50%);
         background: rgba(5, 13, 26, 0.95);
         flex-direction: column;
         gap: 0;
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s;
+        padding: 8px 0;
+        border-bottom: 1px solid var(--card-border);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
     .nav-menu.active {
@@ -1248,9 +1253,14 @@ body::before {
     }
 
     .nav-menu a {
-        padding: 15px 20px;
+        padding: 18px 24px;
         display: block;
         border-bottom: 1px solid var(--card-border);
+        font-size: 16px;
+    }
+
+    .nav-menu a:active {
+        background: rgba(93, 173, 226, 0.08);
     }
 
     .nav-menu li:last-child {
