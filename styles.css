@@ -1226,6 +1226,10 @@ body::before {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .header {
+        border-bottom: none;
+    }
+
     .nav-toggle {
         display: block;
     }
@@ -1244,7 +1248,7 @@ body::before {
         overflow: hidden;
         transition: max-height 0.3s;
         padding: 8px 0;
-        border-bottom: 1px solid var(--card-border);
+        border-bottom: none;
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
     }
 
