@@ -1204,7 +1204,7 @@ body::before {
     }
 
     .nav-menu.active {
-        max-height: 280px;
+        max-height: 320px;
     }
 
     .nav-menu a {
