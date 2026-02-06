@@ -131,17 +131,22 @@ body::before {
     border-radius: 6px;
     transition: all 0.3s;
     font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-login-icon {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
 }
 
 .nav-login:hover {
     background: var(--cyan);
     color: var(--dark-bg) !important;
-}
-
-.nav-login-icon {
-    display: none;
-    margin-left: 8px;
-    font-size: 18px;
 }
 
 .nav-toggle {
@@ -1246,10 +1251,6 @@ body::before {
         color: var(--dark-bg) !important;
         border: none;
         border-radius: 0;
-    }
-
-    .nav-login-icon {
-        display: inline;
     }
 
     .hero {
