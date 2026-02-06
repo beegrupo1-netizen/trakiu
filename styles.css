@@ -800,6 +800,305 @@ body::before {
     color: var(--light);
 }
 
+/* Pricing */
+.pricing {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(93, 173, 226, 0.03), rgba(155, 89, 182, 0.02));
+    text-align: center;
+}
+
+.pricing > .container > h2 {
+    font-size: 48px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.pricing-subtitle {
+    font-size: 18px;
+    color: var(--gray);
+    margin-bottom: 60px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.pricing-card {
+    padding: 40px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 12px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-card:hover {
+    background: rgba(93, 173, 226, 0.08);
+    border-color: var(--cyan);
+    transform: translateY(-5px);
+}
+
+.pricing-card-base {
+    border: 2px solid var(--cyan);
+    background: rgba(93, 173, 226, 0.05);
+}
+
+.pricing-card-base:hover {
+    border-color: var(--cyan);
+    background: rgba(93, 173, 226, 0.1);
+}
+
+.pricing-card-growth {
+    border-color: var(--purple);
+}
+
+.pricing-card-advanced {
+    border-color: var(--red);
+}
+
+.pricing-header {
+    margin-bottom: 30px;
+}
+
+.pricing-header h3 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--light);
+    margin-bottom: 10px;
+}
+
+.pricing-tag {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--cyan);
+    margin: 0;
+}
+
+.pricing-card-growth .pricing-tag {
+    color: var(--purple);
+}
+
+.pricing-card-advanced .pricing-tag {
+    color: var(--red);
+}
+
+.pricing-price {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.pricing-discount-badge {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--red);
+    background: rgba(255, 107, 91, 0.1);
+    padding: 8px 12px;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid var(--red);
+}
+
+.price-old {
+    font-size: 14px;
+    color: var(--gray);
+    text-decoration: line-through;
+    font-weight: 500;
+}
+
+.pricing-new-price {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.price-current {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--cyan);
+}
+
+.price-annual {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+.pricing-card-growth .price-current {
+    color: var(--purple);
+}
+
+.pricing-card-growth .pricing-discount-badge {
+    color: var(--purple);
+    border-color: var(--purple);
+    background: rgba(155, 89, 182, 0.1);
+}
+
+.pricing-card-advanced .price-current {
+    color: var(--red);
+}
+
+.pricing-card-advanced .pricing-discount-badge {
+    color: var(--red);
+    border-color: var(--red);
+    background: rgba(255, 107, 91, 0.1);
+}
+
+.pricing-promo {
+    font-size: 13px;
+    color: var(--cyan);
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 30px;
+    padding: 15px;
+    background: rgba(93, 173, 226, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.pricing-card-growth .pricing-promo {
+    color: var(--purple);
+    background: rgba(155, 89, 182, 0.1);
+}
+
+.pricing-card-advanced .pricing-promo {
+    color: var(--red);
+    background: rgba(255, 107, 91, 0.1);
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    font-size: 14px;
+    color: var(--light);
+    padding: 12px 0;
+    border-bottom: 1px solid var(--card-border);
+    line-height: 1.6;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-btn {
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 14px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .pricing > .container > h2 {
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+
+    .pricing-subtitle {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .pricing-card {
+        padding: 30px;
+    }
+
+    .pricing-header h3 {
+        font-size: 24px;
+    }
+
+    .pricing-discount-badge {
+        font-size: 11px;
+        padding: 7px 11px;
+    }
+
+    .price-current {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pricing {
+        padding: 60px 0;
+    }
+
+    .pricing > .container > h2 {
+        font-size: 24px;
+    }
+
+    .pricing-subtitle {
+        font-size: 13px;
+        margin-bottom: 30px;
+    }
+
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .pricing-card {
+        padding: 20px;
+    }
+
+    .pricing-header h3 {
+        font-size: 20px;
+    }
+
+    .pricing-price {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+    }
+
+    .pricing-discount-badge {
+        font-size: 10px;
+        padding: 6px 10px;
+    }
+
+    .price-current {
+        font-size: 24px;
+    }
+
+    .price-old, .price-annual {
+        font-size: 12px;
+    }
+
+    .pricing-promo {
+        font-size: 12px;
+        margin-bottom: 20px;
+        padding: 12px;
+    }
+
+    .pricing-features li {
+        font-size: 13px;
+        padding: 10px 0;
+    }
+
+    .pricing-btn {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+
 /* Contact */
 .contact {
     padding: 80px 0;
@@ -1467,6 +1766,14 @@ body::before {
 .diff-card:nth-child(2) { animation-delay: 0.2s; }
 .diff-card:nth-child(3) { animation-delay: 0.3s; }
 .diff-card:nth-child(4) { animation-delay: 0.4s; }
+
+.pricing-card {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.pricing-card:nth-child(1) { animation-delay: 0.1s; }
+.pricing-card:nth-child(2) { animation-delay: 0.2s; }
+.pricing-card:nth-child(3) { animation-delay: 0.3s; }
 
 /* Ripple effect */
 @keyframes ripple {
