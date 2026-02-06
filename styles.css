@@ -1250,6 +1250,13 @@ body::before {
         padding: 15px 20px;
         display: block;
         border-bottom: 1px solid var(--card-border);
+        text-align: right;
+        width: 100%;
+        padding-right: 24px;
+    }
+
+    .nav-menu li {
+        width: 100%;
     }
 
     .nav-menu li:last-child {
