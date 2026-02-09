@@ -343,6 +343,45 @@
         </div>
     </div>
 
+    <!-- Chatbot -->
+    <div id="chatbot" class="chatbot">
+        <button id="chatbotToggle" class="chatbot-toggle" aria-label="Abrir chat de ajuda">
+            <svg class="chatbot-icon-open" viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h11zm4 0h2v2h-2z"/></svg>
+            <svg class="chatbot-icon-close" viewBox="0 0 24 24" fill="currentColor"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+        <div id="chatbotWindow" class="chatbot-window">
+            <div class="chatbot-header">
+                <div class="chatbot-header-info">
+                    <div class="chatbot-avatar">T</div>
+                    <div>
+                        <h4>Assistente Trakiu</h4>
+                        <span class="chatbot-status">Online</span>
+                    </div>
+                </div>
+                <button id="chatbotClose" class="chatbot-close">&times;</button>
+            </div>
+            <div id="chatbotMessages" class="chatbot-messages">
+                <div class="chat-message bot">
+                    <p>Olá! 👋 Sou o assistente virtual da <strong>Trakiu</strong>. Como posso ajudar?</p>
+                </div>
+            </div>
+            <div id="chatbotOptions" class="chatbot-options">
+                <button class="chatbot-option" data-question="what">O que é a Trakiu?</button>
+                <button class="chatbot-option" data-question="features">Funcionalidades</button>
+                <button class="chatbot-option" data-question="pricing">Planos e Preços</button>
+                <button class="chatbot-option" data-question="acquire">Como adquirir?</button>
+                <button class="chatbot-option" data-question="download">Descarregar a app</button>
+                <button class="chatbot-option" data-question="contact">Falar com alguém</button>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbotInput" class="chatbot-input" placeholder="Escreva a sua mensagem...">
+                <button id="chatbotSend" class="chatbot-send">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
