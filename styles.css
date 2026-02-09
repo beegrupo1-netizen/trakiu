@@ -859,6 +859,13 @@ body::before {
     margin-bottom: 60px;
 }
 
+.pricing-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
