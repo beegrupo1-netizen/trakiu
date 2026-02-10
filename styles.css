@@ -1077,6 +1077,44 @@ body::before {
     opacity: 0.7;
 }
 
+.footer-dev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.footer-dev span {
+    font-size: 12px;
+    color: var(--gray);
+    opacity: 0.6;
+}
+
+.footer-dev a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    transition: opacity var(--transition);
+}
+
+.footer-dev a span {
+    font-size: 12px;
+    color: var(--gray);
+    opacity: 0.6;
+    font-weight: 600;
+}
+
+.footer-dev a:hover {
+    opacity: 0.8;
+}
+
+.footer-dev-logo {
+    height: 20px;
+    width: auto;
+}
+
 /* MODAL */
 .modal {
     display: none;
