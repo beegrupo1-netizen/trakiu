@@ -1742,8 +1742,8 @@ body::before {
     .footer-content { grid-template-columns: repeat(3, 1fr); gap: 24px; padding-bottom: 32px; }
     .footer-brand { grid-column: 1 / -1; text-align: center; align-items: center; }
     .footer-desc { max-width: 100%; }
-    .footer-links { align-items: center; text-align: center; gap: 8px; }
-    .footer-links a { min-height: 36px; justify-content: center; }
+    .footer-links { align-items: center; text-align: center; gap: 2px; }
+    .footer-links a { min-height: 28px; justify-content: center; }
     .footer-bottom { padding: 16px 0; }
 
     .cookie-content { flex-direction: column; gap: 20px; }
@@ -1823,9 +1823,9 @@ body::before {
     .footer-brand { grid-column: 1 / -1; text-align: center; align-items: center; gap: 10px; }
     .footer-desc { max-width: 100%; font-size: 12px; }
     .footer-logo { height: 22px; }
-    .footer-links { align-items: center; text-align: center; gap: 6px; }
-    .footer-links h5 { font-size: 11px; margin-bottom: 2px; }
-    .footer-links a { font-size: 12px; min-height: 32px; justify-content: center; }
+    .footer-links { align-items: center; text-align: center; gap: 0px; }
+    .footer-links h5 { font-size: 11px; margin-bottom: 0px; }
+    .footer-links a { font-size: 12px; min-height: 26px; justify-content: center; }
     .footer-bottom { padding: 14px 0; }
     .footer-bottom p { font-size: 11px; }
 
@@ -1908,7 +1908,7 @@ body::before {
     .cta-icon-circle { width: 80px; height: 80px; }
     .footer-content { gap: 12px; padding-bottom: 20px; }
     .footer-links h5 { font-size: 10px; }
-    .footer-links a { font-size: 11px; min-height: 28px; }
+    .footer-links a { font-size: 11px; min-height: 24px; }
     .footer-desc { font-size: 11px; }
     .footer-bottom { padding: 12px 0; }
     .footer-bottom p { font-size: 10px; }
