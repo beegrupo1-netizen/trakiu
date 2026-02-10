@@ -1681,6 +1681,7 @@ body::before {
     .nav-toggle { display: flex; align-items: center; justify-content: center; z-index: 1001; position: relative; }
 
     .nav-menu {
+        display: flex;
         position: fixed;
         top: 0; left: 0; right: 0; bottom: 0;
         width: 100%;
@@ -1916,15 +1917,15 @@ body::before {
 
     /* Min touch targets 44px (Apple HIG) */
     .btn { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; }
-    .nav-toggle { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
+    .nav-toggle { min-width: 44px; min-height: 44px; }
     .chatbot-toggle { min-width: 50px; min-height: 50px; }
     .chatbot-send { min-width: 44px; min-height: 44px; }
     .chatbot-close { min-width: 44px; min-height: 44px; display: flex; align-items: center; justify-content: center; }
     .modal-close { min-width: 44px; min-height: 44px; }
     .cookie-buttons .btn { min-height: 44px; }
     .chatbot-option { min-height: 36px; display: inline-flex; align-items: center; }
-    .nav-menu a { min-height: 48px; display: flex; align-items: center; }
-    .footer-links a { min-height: 44px; display: flex; align-items: center; }
+    .nav-menu a { min-height: 48px; display: flex; align-items: center; justify-content: center; }
+    .footer-links a { min-height: 32px; display: flex; align-items: center; justify-content: center; }
 
     /* Safe area padding for bottom elements */
     .footer-bottom {
@@ -1996,5 +1997,5 @@ body::before {
         max-height: 100dvh;
     }
     .chatbot-messages { max-height: 40vh; }
-    .nav-menu a { min-height: 44px; padding: 12px 32px; font-size: 16px; }
+    .nav-menu a { min-height: 44px; padding: 12px 32px; font-size: 16px; justify-content: center; }
 }
